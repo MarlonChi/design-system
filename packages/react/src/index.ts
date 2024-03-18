@@ -1,3 +1,3 @@
-import { colors } from "@MarlonChi-ui/tokens";
+import { colors } from '@MarlonChi-ui/tokens'
 
-console.log(colors);
+console.log(colors)
