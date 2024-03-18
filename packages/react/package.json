@@ -10,9 +10,10 @@
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
   },
   "author": "Marlon Chiodelli <marlonchiodelli@hotmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@MarlonChi-ui/tokens": "*",
+    "@MarlonChi-ui/ts-config": "*",
     "tsup": "^8.0.2",
     "typescript": "^5.4.2"
   }
