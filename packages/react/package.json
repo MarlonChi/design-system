@@ -6,16 +6,19 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "author": "Marlon Chiodelli <marlonchiodelli@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@MarlonChi-ui/eslint-config": "*",
     "@MarlonChi-ui/tokens": "*",
     "@MarlonChi-ui/ts-config": "*",
-    "@MarlonChi-ui/eslint-config": "*",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "react": "^18.2.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.2"
   }
