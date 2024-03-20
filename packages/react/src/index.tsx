@@ -1,7 +1,11 @@
-import { colors } from '@MarlonChi-ui/tokens'
+import { styled } from './styles'
+
+const Button = styled('button', {
+  fontFamily: '$default',
+  backgroundColor: '$ignite500',
+  borderRadius: '$md',
+})
 
 export const App = () => {
-  console.log(colors)
-
-  return <div style={{ color: colors.ignite300 }}>Hello React</div>
+  return <Button>Hello React</Button>
 }
