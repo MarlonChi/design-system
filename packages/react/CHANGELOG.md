@@ -1,5 +1,12 @@
 # @marlon_chio-ui/react
 
+## 2.1.0
+
+### Minor Changes
+
+- 68b72a2: Added toast component
+- 27c498b: Added tooltip component
+
 ## 2.0.1
 
 ### Patch Changes
