@@ -8,6 +8,13 @@ export default {
     src: 'https://github.com/MarlonChi.png',
     alt: 'Marlon Chiodelli',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
