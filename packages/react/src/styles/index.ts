@@ -6,7 +6,7 @@ import {
   lineHeights,
   radii,
   space,
-} from '@MarlonChi-ui/tokens'
+} from '@marlon_chio-ui/tokens'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 
 export const {

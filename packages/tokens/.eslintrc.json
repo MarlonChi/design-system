@@ -1,4 +1,4 @@
 {
-    "extends": "@MarlonChi-ui/eslint-config"
+    "extends": "@marlon_chio-ui/eslint-config"
 
 }

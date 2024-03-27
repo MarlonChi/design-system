@@ -1,6 +1,6 @@
 {
-  "name": "@MarlonChi-ui/react",
-  "version": "1.0.0",
+  "name": "@marlon_chio-ui/react",
+  "version": "2.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -13,9 +13,9 @@
   "author": "Marlon Chiodelli <marlonchiodelli@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@MarlonChi-ui/eslint-config": "*",
-    "@MarlonChi-ui/tokens": "*",
-    "@MarlonChi-ui/ts-config": "*",
+    "@marlon_chio-ui/eslint-config": "*",
+    "@marlon_chio-ui/tokens": "*",
+    "@marlon_chio-ui/ts-config": "*",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "react": "^18.2.0",

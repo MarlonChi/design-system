@@ -1,5 +1,5 @@
 {
-  "name": "@MarlonChi-ui/tokens",
+  "name": "@marlon_chio-ui/tokens",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -15,8 +15,8 @@
   "author": "Marlon Chiodelli <marlonchiodelli@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@MarlonChi-ui/ts-config": "*",
-    "@MarlonChi-ui/eslint-config": "*",
+    "@marlon_chio-ui/ts-config": "*",
+    "@marlon_chio-ui/eslint-config": "*",
     "tsup": "^8.0.2",
     "typescript": "^5.4.2"
   }

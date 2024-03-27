@@ -1,4 +1,4 @@
-import { colors } from '@MarlonChi-ui/tokens'
+import { colors } from '@marlon_chio-ui/tokens'
 import { getContrast } from 'polished'
 
 export function ColorsGrid() {
