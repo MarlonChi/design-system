@@ -1,11 +1,12 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as react from 'react';
-import { ComponentProps, ElementType } from 'react';
+import { ComponentProps, ElementType, ReactNode } from 'react';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as Popover from '@radix-ui/react-popover';
+import * as RadixToast from '@radix-ui/react-toast';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
@@ -1888,10 +1889,24 @@ interface TooltipProps extends ComponentProps<typeof TooltipContent> {
     triggerElement: JSX.Element;
     content: string;
 }
-declare function Tooltip({ triggerElement, content, ...props }: TooltipProps): react_jsx_runtime.JSX.Element;
-declare namespace Tooltip {
-    var displayName: string;
+declare const Tooltip: {
+    ({ triggerElement, content, ...props }: TooltipProps): react_jsx_runtime.JSX.Element;
+    displayName: string;
+};
+
+interface ToastProviderProps extends ComponentProps<typeof RadixToast.Provider> {
+    children: ReactNode;
 }
+declare function ToastProvider({ children }: ToastProviderProps): react_jsx_runtime.JSX.Element;
+
+interface ToastProps extends ComponentProps<typeof RadixToast.Root> {
+    title: string;
+    content: string;
+}
+declare const Toast: {
+    ({ open, onOpenChange, title, content, ...props }: ToastProps): react_jsx_runtime.JSX.Element;
+    displayName: string;
+};
 
 declare const styled: <Type extends _stitches_react_types_util.Function | keyof JSX.IntrinsicElements | react.ComponentType<any>, Composers extends (string | _stitches_react_types_util.Function | react.ComponentType<any> | {
     [name: string]: unknown;
@@ -3585,4 +3600,4 @@ declare const createTheme: <Argument0 extends string | ({
     selector: string;
 } & (Argument0 extends string ? _stitches_react_types_stitches.ThemeTokens<Argument1, ""> : _stitches_react_types_stitches.ThemeTokens<Argument0, "">);
 
-export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, Checkbox, type CheckboxProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, Tooltip, type TooltipProps, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };
+export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, Checkbox, type CheckboxProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps, Toast, type ToastProps, ToastProvider, type ToastProviderProps, Tooltip, type TooltipProps, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };

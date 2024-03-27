@@ -568,7 +568,7 @@ var TooltipContent = styled(Popover.Content, {
 
 // src/components/Tooltip/index.tsx
 import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
-function Tooltip(_a) {
+var Tooltip = (_a) => {
   var _b = _a, { triggerElement, content } = _b, props = __objRest(_b, ["triggerElement", "content"]);
   return /* @__PURE__ */ jsxs4(TooltipContainer, { modal: true, children: [
     /* @__PURE__ */ jsx5(TooltipTrigger, { children: triggerElement }),
@@ -577,8 +577,127 @@ function Tooltip(_a) {
       /* @__PURE__ */ jsx5(TooltipArrow, {})
     ] }))
   ] });
-}
+};
 Tooltip.displayName = "Tooltip";
+
+// src/components/Providers/index.tsx
+import * as RadixToast from "@radix-ui/react-toast";
+import { jsx as jsx6 } from "react/jsx-runtime";
+function ToastProvider({ children }) {
+  return /* @__PURE__ */ jsx6(RadixToast.Provider, { children });
+}
+
+// src/components/Toast/index.tsx
+import * as RadixToast2 from "@radix-ui/react-toast";
+import { X } from "phosphor-react";
+
+// src/components/Toast/styles.ts
+import * as Toast from "@radix-ui/react-toast";
+var slideIn2 = keyframes({
+  from: {
+    transform: "translateX(calc(100% + 24px))"
+  },
+  to: {
+    transform: "translateX(0)"
+  }
+});
+var slideOut2 = keyframes({
+  from: {
+    transform: "translateX(0)"
+  },
+  to: {
+    transform: "translateX(calc(100% + 24px))"
+  }
+});
+var ToastContainer = styled(Toast.Root, {
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600",
+  display: "flex",
+  flexDirection: "column",
+  borderRadius: "$sm",
+  padding: "$3 $5",
+  width: "320px",
+  gap: "$1",
+  div: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+    h2: {
+      margin: 0,
+      color: "$white",
+      fontSize: "$xl",
+      fontFamily: "$default",
+      fontWeight: "$bold",
+      lineHeight: "$base"
+    },
+    svg: {
+      color: "$gray200",
+      "&:hover": {
+        cursor: "pointer",
+        color: "$gray100"
+      }
+    }
+  },
+  span: {
+    color: "$gray200",
+    fontSize: "$sm",
+    fontFamily: "$default",
+    fontWeight: "$regular",
+    lineHeight: "$base"
+  },
+  '&[data-state="open"]': {
+    animation: `${slideIn2} 300ms ease`
+  },
+  '&[data-state="closed"]': {
+    animation: `${slideOut2} 300ms ease`
+  }
+});
+var ToastViewPort = styled(Toast.Viewport, {
+  position: "fixed",
+  bottom: 0,
+  right: 0,
+  padding: "$6",
+  margin: 0,
+  listStyle: "none",
+  zIndex: 9999
+});
+
+// src/components/Toast/index.tsx
+import { Fragment, jsx as jsx7, jsxs as jsxs5 } from "react/jsx-runtime";
+var Toast2 = (_a) => {
+  var _b = _a, {
+    open,
+    onOpenChange,
+    title,
+    content
+  } = _b, props = __objRest(_b, [
+    "open",
+    "onOpenChange",
+    "title",
+    "content"
+  ]);
+  return /* @__PURE__ */ jsxs5(Fragment, { children: [
+    /* @__PURE__ */ jsxs5(
+      ToastContainer,
+      __spreadProps(__spreadValues({
+        open,
+        onOpenChange,
+        defaultOpen: true,
+        duration: 3e3
+      }, props), {
+        children: [
+          /* @__PURE__ */ jsxs5("div", { children: [
+            /* @__PURE__ */ jsx7(RadixToast2.Title, { asChild: true, children: /* @__PURE__ */ jsx7("h2", { children: title }) }),
+            /* @__PURE__ */ jsx7(RadixToast2.Close, { asChild: true, children: /* @__PURE__ */ jsx7(X, { weight: "bold", size: 20 }) })
+          ] }),
+          /* @__PURE__ */ jsx7(RadixToast2.Description, { asChild: true, children: /* @__PURE__ */ jsx7("span", { children: content }) })
+        ]
+      })
+    ),
+    /* @__PURE__ */ jsx7(ToastViewPort, {})
+  ] });
+};
+Toast2.displayName = "Toast";
 export {
   Avatar2 as Avatar,
   Box,
@@ -589,6 +708,8 @@ export {
   Text,
   TextArea,
   TextInput,
+  Toast2 as Toast,
+  ToastProvider,
   Tooltip,
   config,
   createTheme,
