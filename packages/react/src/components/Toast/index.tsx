@@ -13,7 +13,6 @@ export const Toast = ({
     onOpenChange,
     title,
     content,
-    ...props
 }: ToastProps) => {
     return (
         <>
@@ -22,7 +21,6 @@ export const Toast = ({
                 onOpenChange={onOpenChange}
                 defaultOpen={true}
                 duration={3000}
-                {...props}
             >
                 <div>
                     <RadixToast.Title asChild>

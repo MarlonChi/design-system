@@ -716,27 +716,20 @@ var ToastViewPort = styled(Toast.Viewport, {
 
 // src/components/Toast/index.tsx
 var import_jsx_runtime7 = require("react/jsx-runtime");
-var Toast2 = (_a) => {
-  var _b = _a, {
-    open,
-    onOpenChange,
-    title,
-    content
-  } = _b, props = __objRest(_b, [
-    "open",
-    "onOpenChange",
-    "title",
-    "content"
-  ]);
+var Toast2 = ({
+  open,
+  onOpenChange,
+  title,
+  content
+}) => {
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(
       ToastContainer,
-      __spreadProps(__spreadValues({
+      {
         open,
         onOpenChange,
         defaultOpen: true,
-        duration: 3e3
-      }, props), {
+        duration: 3e3,
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast2.Title, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { children: title }) }),
@@ -744,7 +737,7 @@ var Toast2 = (_a) => {
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast2.Description, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { children: content }) })
         ]
-      })
+      }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ToastViewPort, {})
   ] });

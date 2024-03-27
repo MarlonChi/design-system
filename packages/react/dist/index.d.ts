@@ -1904,7 +1904,7 @@ interface ToastProps extends ComponentProps<typeof RadixToast.Root> {
     content: string;
 }
 declare const Toast: {
-    ({ open, onOpenChange, title, content, ...props }: ToastProps): react_jsx_runtime.JSX.Element;
+    ({ open, onOpenChange, title, content, }: ToastProps): react_jsx_runtime.JSX.Element;
     displayName: string;
 };
 

@@ -664,27 +664,20 @@ var ToastViewPort = styled(Toast.Viewport, {
 
 // src/components/Toast/index.tsx
 import { Fragment, jsx as jsx7, jsxs as jsxs5 } from "react/jsx-runtime";
-var Toast2 = (_a) => {
-  var _b = _a, {
-    open,
-    onOpenChange,
-    title,
-    content
-  } = _b, props = __objRest(_b, [
-    "open",
-    "onOpenChange",
-    "title",
-    "content"
-  ]);
+var Toast2 = ({
+  open,
+  onOpenChange,
+  title,
+  content
+}) => {
   return /* @__PURE__ */ jsxs5(Fragment, { children: [
     /* @__PURE__ */ jsxs5(
       ToastContainer,
-      __spreadProps(__spreadValues({
+      {
         open,
         onOpenChange,
         defaultOpen: true,
-        duration: 3e3
-      }, props), {
+        duration: 3e3,
         children: [
           /* @__PURE__ */ jsxs5("div", { children: [
             /* @__PURE__ */ jsx7(RadixToast2.Title, { asChild: true, children: /* @__PURE__ */ jsx7("h2", { children: title }) }),
@@ -692,7 +685,7 @@ var Toast2 = (_a) => {
           ] }),
           /* @__PURE__ */ jsx7(RadixToast2.Description, { asChild: true, children: /* @__PURE__ */ jsx7("span", { children: content }) })
         ]
-      })
+      }
     ),
     /* @__PURE__ */ jsx7(ToastViewPort, {})
   ] });
