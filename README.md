@@ -1,8 +1,6 @@
-![Cover](./.github/cover.png)
+# marlon_chio-ui Design System
 
-# Ignite Shop
-
-Essa aplicação foi desenvolvida durante a trilha de formação React da Rocketseat. Utilizando Next e usando a API do Strapi
+Essa aplicação foi desenvolvida durante a trilha de formação React da Rocketseat. Utilizando de arquitetura monorepo com documentação de componentes via Storybook.
 
 ## Executando
 
@@ -12,13 +10,14 @@ Após clonar o repositório, acesse a pasta do projeto e execute os comandos aba
 npm install
 npm run dev
 ```
+Acesse <http://localhost:5173> para visualizar a aplicação.
 
 # Para ver os components
 [Design System](https://marlonchi.github.io/design-system/)
 
 
 
-Acesse <http://localhost:5173> para visualizar a aplicação.
+
 
 
 # Components
